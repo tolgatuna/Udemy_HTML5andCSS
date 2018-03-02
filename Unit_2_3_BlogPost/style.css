@@ -1,0 +1,35 @@
+/*Select All Elements*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-size: 18px;
+	font-family: Helvetica Neue, Arial;
+}
+
+h1, h2 {
+	color: rgba(79, 126, 79, 0.38);
+}
+
+h1 {
+	font-size: 40px;
+    margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.main-text {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#author-text {
+    text-align: left;
+    font-size: 22px;
+}
