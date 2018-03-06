@@ -1,3 +1,12 @@
+/* -------------------------------------------- */
+/* BASIC SETUPS */
+/* -------------------------------------------- */
+/*
+    DEFAULT VALUES : 
+    Orange Color : #e67e22
+*/
+
+/* Select all and set margin, padding as 0. And set elemets border-box */
 * {
     margin: 0;
     padding: 0;
@@ -13,24 +22,30 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+
+/* -------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* -------------------------------------------- */
+
 .row {
     max-width: 1140px;  /*Only absolute value which we used*/
     margin: 0 auto;     /*Top and bottom will 0, left and right will auto*/ 
 }
 
-header {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/hero.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;      /*100 percent of the view horizontal*/
+section {
+    padding: 80px 0;
 }
 
-.hero-text-box {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);   /*Translate the content size starts from x coordinate -50% and y coordinate -50%*/
+.box {
+    padding: 1%;
+}
+
+
+/* ----- HEADINGS ----- */
+h1, h2, h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 h1 {
@@ -38,12 +53,56 @@ h1 {
     margin-bottom: 20px;
     color: #fff;
     font-size: 240%;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     word-spacing: 4px;
 }
 
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    letter-spacing: 0;
+}
+
+
+/* ----- PARAGRAPHS ----- */
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+/* ----- ICONS ----- */
+.icon-big {
+    font-size: 300%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ----- BUTTONS ----- */
 .btn:link,
 .btn:visited {
     display: inline-block;
@@ -51,7 +110,7 @@ h1 {
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
-    transition: background-color 0.2s, color 0.2s, border 0.2s;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
 }
 
 .btn-full:link,
@@ -83,4 +142,58 @@ h1 {
 .btn-ghost:active {
     color: #fff;
     border: 1px solid #e67e22; 
+}
+
+
+/* -------------------------------------------- */
+/* HEADER */
+/* -------------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;      /*100 percent of the view horizontal*/
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   /*Translate the content size starts from x coordinate -50% and y coordinate -50%*/
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    padding: 5px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #e67e22;
 }
