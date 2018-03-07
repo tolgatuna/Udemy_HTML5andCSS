@@ -222,6 +222,15 @@ header {
     margin-top: 20px;
 }
 
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-top: 5px;
+}
+
+/* ----- Main Navi ----- */
 .main-nav {
     float: right;
     list-style: none;
@@ -248,6 +257,49 @@ header {
 .main-nav li a:hover,
 .main-nav li a:active{
     border-bottom: 2px solid #e67e22;
+}
+
+
+/* ----- Mobile Navi ----- */
+.mobile-nav-icon {
+    display: none;
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* ----- Sticky Navi ----- */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav {
+    margin-top: 18px;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 16px 0;
+    color: #555;
+}
+
+.sticky .logo {
+    display: none;
+}
+
+.sticky .logo-black {
+    display: block;
 }
 
 
@@ -590,4 +642,26 @@ footer p {
 }
 .ion-social-instagram:hover {
     color: #517fa4;
+}
+
+
+/* -------------------------------------------- */
+/* ANIMATIONS */
+/* -------------------------------------------- */
+
+.js--features-row,
+.js--cities-row,
+.js--app-image {
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js--planbox-premium {
+    animation-duration: 1s;
+}
+
+.js--features-row .animated,
+.js--cities-row .animated,
+.js--app-image .animated {
+    opacity: 1;
 }
